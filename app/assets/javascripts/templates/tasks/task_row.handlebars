@@ -1,0 +1,6 @@
+<tr>
+  <td>{{view Ember.Checkbox checkedBinding="done"}}</td>
+  <td>{{name}}</td>
+  <td><a {{action editTask this href=true}}>Edit</a></td>
+  <td><a {{action deleteTask this target="view"}} href="#">Delete</a></td>
+</tr>

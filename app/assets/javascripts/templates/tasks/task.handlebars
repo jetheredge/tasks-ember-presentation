@@ -1,0 +1,9 @@
+<h2>Task</h2>
+{{view Ember.TextField valueBinding="name"}}
+
+<div>
+  <button type="submit">
+    {{#if id}}Update{{else}}Create{{/if}}
+  </button>
+  <a href="#" {{action "goBack"}}>Cancel</a>
+</div>
