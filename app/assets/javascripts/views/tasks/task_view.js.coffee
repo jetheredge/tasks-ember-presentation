@@ -4,4 +4,7 @@ TasksEmber.TaskView = Ember.View.extend({
   submit: (event) ->
     @get('controller').save()
     @get('controller.target').send('goBack')
+
+  didInsertElement: () ->
+    @$(".autofocus").focus()
 })
