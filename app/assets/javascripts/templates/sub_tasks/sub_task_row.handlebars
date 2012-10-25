@@ -1,0 +1,12 @@
+  <td>
+  </td>
+  <td>
+    {{#if editing}}
+      {{view Ember.TextField valueBinding="name"}} <a href="#" {{action save this target="view"}}>save</a>
+    {{else}}
+      {{name}}
+    {{/if}}
+  </td>
+  <td></td>
+  <td></td>
+  <td></td>

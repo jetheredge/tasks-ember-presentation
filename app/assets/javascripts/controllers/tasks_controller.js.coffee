@@ -7,4 +7,7 @@ TasksEmber.TasksController = Ember.ArrayController.extend({
   doneUpdated: (() ->
     @store.commit()
   ).observes("@each.done")
+
+  addNewSubTask: (task) ->
+    TasksEmber.SubTask.createRecord({ task: task, editing: true })
 })

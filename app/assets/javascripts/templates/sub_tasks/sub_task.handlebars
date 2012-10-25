@@ -1,0 +1,9 @@
+<h2>Sub Task</h2>
+{{view Ember.TextField valueBinding="task.id" type="hidden"}}
+{{view Ember.TextField valueBinding="name" class="autofocus"}}
+<div>
+  <button type="submit">
+    {{#if id}}Update{{else}}Create{{/if}}
+  </button>
+  <a href="#" {{action "cancel" target="view"}}>Cancel</a>
+</div>

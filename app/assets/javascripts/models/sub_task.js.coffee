@@ -1,5 +1,5 @@
-TasksEmber.Task = DS.Model.extend({
+TasksEmber.SubTask = DS.Model.extend({
   name: DS.attr('string', { defaultValue: 'Enter a name' })
   done: DS.attr('boolean', { defaultValue: false })
-  subTasks: DS.hasMany('TasksEmber.SubTask')
+  task: DS.belongsTo('TasksEmber.Task')
 })

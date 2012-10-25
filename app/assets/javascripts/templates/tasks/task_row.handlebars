@@ -1,6 +1,16 @@
 <tr>
   <td>{{view Ember.Checkbox checkedBinding="done"}}</td>
   <td>{{name}}</td>
+  <td><a {{action addSubTask this target="view"}} href="#">Add Sub Task</a></td>
   <td><a {{action editTask this href=true}}>Edit</a></td>
   <td><a {{action deleteTask this target="view"}} href="#">Delete</a></td>
 </tr>
+{{#if subTasks.length}}
+  <tr>
+    <td></td>
+    <td colspan="4"><em>Sub Tasks:</em></td>
+  </tr>
+  {{#each subTasks}}
+    {{view TasksEmber.SubTaskRowView}}
+  {{/each}}
+{{/if}}
